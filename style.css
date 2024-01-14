@@ -1,0 +1,260 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+:root{
+    --man-color: #ff2c1f;
+    --text-color: #020307;
+    --bg-coloe: #fff;
+}
+body{
+    background: var(--text-color);
+    color: var(--bg-coloe);
+
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 100px;
+    transition: 0.5s;
+    /*background: var(--man-color)*/;
+
+    }
+    header.shadow{
+        background: var(--bg-coloe);
+        box-shadow: 0 0 4px rgb(14, 55, 54);
+
+
+    }
+    header.shadow .navbar a{
+        color: var(--text-color);
+
+    }
+    header.shadow .logo{
+        color: var(--text-color);
+        
+    }
+.logo{
+ font-size: 1.1rem;
+ font-weight: 600;
+ align-items: center;
+ color: var(--bg-coloe);
+ display: flex;
+ column-gap: 0.5rem;   
+}
+.navbar{
+    display: flex;
+    column-gap: 2rem;
+    
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg-coloe);
+    
+}
+.navbar a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--man-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s all linear;
+}
+.navbar a:hover::after,
+.navbar .home-active::after{
+    width: 100%;
+}
+.menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000001;
+    display: none;
+}
+.btn{
+    padding: 7px;
+    background: var(--man-color);
+    color: var(--bg-coloe);
+    font-weight: 200;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    background: var(--bg-coloe);
+    color: var(--man-color);
+    padding: 7px;
+    font-weight: 200;
+    border-radius: 0.5rem;
+}
+
+section{
+    padding: 4.srem 0 1.srem;
+}
+.swiper-slid-container{
+    width: 100%;
+    min-height: 640px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgb(2, 3, 7,0.5);
+
+}
+.swiper-slid-container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+
+}
+.home-text{
+z-index: 100%;
+padding: 0 150px;
+}
+.home-text span{
+    color: var(--bg-coloe);
+    font-weight: 500;
+    text-transform: uppercase;    
+}
+.home-text h1{
+    color: var(--bg-coloe);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1ren
+    ;
+}
+.play{
+    position: absolute;
+    right: 4rem;
+    bottom: 10%;
+
+}
+.play {
+    background: var(--bg-coloe);
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: 4px solid rgb(2, 3, 7, 0.5);
+    color: var(--man-color);
+}
+.heading{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2ren;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--man-colorr);
+}
+
+.movies-container{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,auto));
+    grid: 1rem;
+    margin-top: 2ren;
+}
+.box .box-img{
+    width: 100%;
+    height: 270px;
+    cursor: pointer;
+
+}
+
+.box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 4px 3px;;
+    border-radius: 6px;
+ 
+}
+
+.box .box-img img:hover{
+    transform: translateY(-5px);
+    transition: 0.2s all linear;
+border-radius: 15px;
+
+    opacity: 0.5;
+}
+
+
+.box h1{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.box span{
+    font-size: 14px;
+
+}
+@media(max-width: 1000px){
+    .home-text{
+        padding: 0 100px;
+    }
+}
+@media(max-width: 91px){
+    header{
+        padding: 10px 4%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+    .home-text{
+        padding: 0 4%;
+    }
+    .home-text h1{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 774px){
+    header{
+        padding: 12px 4%;
+
+    }
+    .menu-icon{
+        display: initial;
+        color: var(--bg-coloe);
+    }
+}
+video{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.link{
+    color: white;
+    text-decoration: none;   
+    
+}
